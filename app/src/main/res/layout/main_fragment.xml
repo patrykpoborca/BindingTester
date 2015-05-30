@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <import type="java.lang"/>
+        <variable name="user" type="com.example.ppoborca.bindingtester.models.UserModel"/>
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/TextTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{user.firstName}"/>
+
+        <TextView
+            style="@style/TextTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{String.valueOf(user.powerLevel)}"/>
+
+        <com.example.ppoborca.bindingtester.base.BindableEditText
+            style="@style/EditTextTheme"
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="70dp"
+            android:gravity="center"
+            android:clickable="true"
+            android:text="++"
+            android:textSize="40sp"
+            android:id="@+id/button"
+            android:textColor="@color/secondary_text"
+            android:background="@drawable/primarybutton"/>
+
+
+    </LinearLayout>
+
+</layout>
